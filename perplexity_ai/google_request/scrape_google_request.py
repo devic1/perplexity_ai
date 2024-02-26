@@ -16,8 +16,6 @@ class ScrapeGoogle:
         elements_with_class = soup.find_all(class_="yuRUbf")
         final_links = []
         for element in elements_with_class:
-            if len(final_links) > 3:
-                break
             first_a_tag = element.find('a')
             link = first_a_tag['href']
             final_links.append(link)
